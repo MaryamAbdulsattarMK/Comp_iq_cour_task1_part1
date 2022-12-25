@@ -42,10 +42,11 @@ INSTALLED_APPS = [
     'Task1Part1.apps.Task1Part1Config'
 ]
 
+
 CORS_ORIGIN_ALLOW_ALL =True
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CoresMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',

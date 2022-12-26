@@ -1,4 +1,4 @@
-__1.programs need to install __
+##1.programs need to install _
   python 
   pycharm
   sqlit3

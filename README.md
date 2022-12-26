@@ -3,18 +3,18 @@ __1.programs need to install __
   pycharm
   sqlit3
 
-#2.libraryies in python 
+#2.libraryies in python #
   django
   djangorestframework
 
-#3.in pycharm tirminal  create a Django app, first create a project called DjangoAPI
+#3.in pycharm tirminal  create a Django app, first create a project called DjangoAPI#
 
   '''django-admin startproject DjangoAPI'''
 
 #4.create a Django app called TaskPart1:
   '''django-admin startapp Task1Part1'''
  
-#5.Register the App Project Settings in DjangoAPI->settings.py
+#5.Register the App Project Settings in DjangoAPI->settings.py#
    '''
  
 
@@ -39,7 +39,7 @@ MIDDLEWARE = [
     '''
     
     
-#6.Register App URLs in DjangoAPI->urls.py
+#6.Register App URLs in DjangoAPI->urls.py#
   '''
     from django.conf.urls import url,include
     from django.contrib import admin
@@ -55,7 +55,7 @@ MIDDLEWARE = [
   
   
   
-  #7.in Task1Part1->apps.py make app add
+  #7.in Task1Part1->apps.py make app add#
   
         '''
            from django.apps import AppConfig
@@ -65,21 +65,20 @@ MIDDLEWARE = [
 
         '''
     
-   #8.Create a Model for the App Task1Part1->create pthon file named model.py
+   #8.Create a Model for the App Task1Part1->create pthon file named model.py#
       '''
           from django.db import models
           class Post(models.Model):
               id = models.AutoField(primary_key=True)
               title = models.CharField(max_length=500)
               text = models.TextField()
-
-      '''
+          '''
       
-    #9.Make Migrations
+    #9.Make Migrations#
       ''' python manage.py makemigrations Task1Part1'''
       '''python manage.py migrate'''
       
-    #10. Serialize the Model in Task1Part1-> create python file named serializer.py
+    #10. Serialize the Model in Task1Part1-> create python file named serializer.py#
           '''
               from rest_framework import serializers
               from .model import Post
@@ -90,7 +89,7 @@ MIDDLEWARE = [
 
           '''
           
-   #11.make view and add for database create file in Task1Part1->views.py
+   #11.make view and add for database create file in Task1Part1->views.py#
             ''' from django.http import JsonResponse
                 from django.views.decorators.csrf import csrf_exempt
                 from rest_framework.parsers import JSONParser
@@ -112,7 +111,7 @@ MIDDLEWARE = [
                             return JsonResponse("Added Successfully", safe=False)
                         return JsonResponse("Failed to Add", safe=False)
                '''
-  #12.Create a URL Path for the App in Task1Part1 create python file named urls.py
+  #12.Create a URL Path for the App in Task1Part1 create python file named urls.py#
             '''
 
               from django.conf.urls import url
@@ -126,10 +125,10 @@ MIDDLEWARE = [
               ]
 
             '''
-#13. run server 
+#13. run server #
       '''python manage.py runserver'''
 
-#14. need postman to test
+#14. need postman to test#
 
 
 #15.in Tadk1Part1->admin
